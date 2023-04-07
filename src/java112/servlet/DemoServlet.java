@@ -25,6 +25,12 @@ public class DemoServlet extends HttpServlet {
         
         taskId = 0;
         taskList = new ArrayList<Task>();
+
+        //Below code is for testing purposes
+        Date tdate = new Date("04/29/2023");
+        Task task1 = new Task(taskId, tdate, "Demo Task", false);
+        
+        taskList.add(task1);
     }
 
     /**
@@ -41,10 +47,6 @@ public class DemoServlet extends HttpServlet {
 
         request.setAttribute("taskList", taskList);
 
-        Date tdate = new Date("04/29/2023");
-        Task task1 = new Task(taskId, tdate, "Demo Task", false);
-        request.setAttribute("task", task1);
-        taskList.add(task1);
 
         String url = "/demo.jsp";
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
@@ -62,6 +64,7 @@ public class DemoServlet extends HttpServlet {
         // Task newTask = new Task(taskId, dueDate, description, completionStatus);
 
         // taskList.add(newTask);
+        
     }
 
 }

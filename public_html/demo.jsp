@@ -7,11 +7,11 @@
     <body>
         <h1>Demo page</h1>
         <!-- <form action="DemoServlet" method="get"></form> -->
-        <br/>
+        <!-- <br/>
         <p>${task.id}</p>
         <p>${task.dueDate}</p>
         <p>${task.description}</p>
-        <p>${task.completionStatus}</p>
+        <p>${task.completionStatus}</p> -->
         <p>${taskList}</p>
     </body>
 </html>
