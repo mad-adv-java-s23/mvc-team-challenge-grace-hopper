@@ -48,9 +48,7 @@ public class ToDoController extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-
         request.setAttribute("taskList", taskList);
-
 
         String url = "/tasklist.jsp";
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
@@ -60,15 +58,21 @@ public class ToDoController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        // taskId++;
-        // Date dueDate = request.getParameter("dueDate");
-        // String description = request.getParameter("description");
-        // boolean completionStatus = false;
+        taskId++;
+        //Date dueDate = request.getParameter("dueDate");
+        Date dueDate = new Date("04/29/2023"); // <== testing only
+        String description = request.getParameter("description");
+        boolean completionStatus = false;
 
-        // Task newTask = new Task(taskId, dueDate, description, completionStatus);
+        Task newTask = new Task(taskId, dueDate, description, completionStatus);
 
-        // taskList.add(newTask);
+        taskList.add(newTask);
+
+        request.setAttribute("taskList", taskList);
         
+        String url = "/tasklist.jsp";
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
+        dispatcher.forward(request, response);
     }
 
 }
