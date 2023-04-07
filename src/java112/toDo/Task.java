@@ -1,4 +1,5 @@
 package java112.toDo;
+import java.util.Date;
 /**
  * This JavaBean class represents a task in Team grace Hopper's To-Do application.
  * @author npatino
@@ -8,6 +9,11 @@ package java112.toDo;
      private Date dueDate;
      private String description;
      private boolean completionStatus;
+     /**
+      * Constructs a new empty Task.
+      */
+     public Task() {
+     }
      /**
       * Constructs a new Task with the given ID, due date, description, and completion status.
       * @param id the ID of the task
