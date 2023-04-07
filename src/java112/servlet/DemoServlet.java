@@ -4,12 +4,28 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
+import java112.toDo.*;
+import java.util.*;
 
 @WebServlet(
         name = "demo",
         urlPatterns = {"/demo"}
 )
 public class DemoServlet extends HttpServlet {
+
+    private int taskId;
+    private ArrayList<Task> taskList;
+
+    /**
+     * Initializes the servlet. Sets taskId to 0.
+     *
+     * @exception  ServletException  if there is a Servlet failure
+     */
+    public void init() throws ServletException {
+        
+        taskId = 0;
+        taskList = new ArrayList<Task>();
+    }
 
     /**
      * Handles HTTP GET requests.
@@ -22,11 +38,30 @@ public class DemoServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+
+        request.setAttribute("taskList", taskList);
+
+        Date tdate = new Date("04/29/2023");
+        Task task1 = new Task(taskId, tdate, "Demo Task", false);
+        request.setAttribute("task", task1);
+        taskList.add(task1);
+
         String url = "/demo.jsp";
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);
-
     }
 
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        // taskId++;
+        // Date dueDate = request.getParameter("dueDate");
+        // String description = request.getParameter("description");
+        // boolean completionStatus = false;
+
+        // Task newTask = new Task(taskId, dueDate, description, completionStatus);
+
+        // taskList.add(newTask);
+    }
 
 }
