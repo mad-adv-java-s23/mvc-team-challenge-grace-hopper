@@ -4,7 +4,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Task List</title>
+  <title>To-Do List</title>
   <link rel="stylesheet" href="styles/style.css">
   <style>
     table {
@@ -28,7 +28,7 @@
   </style>
 </head>
 <body>
-<h3>Task List</h3>
+<h1>To-Do List</h1>
 <table>
   <tr>
     <th>ID</th>
