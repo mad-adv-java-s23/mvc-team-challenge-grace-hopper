@@ -5,13 +5,11 @@
         <title>This is the home page</title>
     </head>
     <body>
-        <h1>Place holder page</h1>
-        <a href="demo">Link to demo page</a>
-
-        <h2>Tast List</h2>
-        <a href="/tasklist.jsp">Link to Task List</a>
-
-        <h2>Diagram</h2>
-        <a href="/diagram.jsp">Link to Diagram</a>
+        <h1>Servlet</h1>
+        <a href="/java112/toDoList">Link to Servlet</a>
+        <h1>Tast List</h1>
+        <a href="/java112/tasklist.jsp">Link to Task List jsp file</a>
+        <h1>Diagram</h1>
+        <a href="/java112/appDiagram.jsp">Link to Diagram jsp file</a>
     </body>
 </html>

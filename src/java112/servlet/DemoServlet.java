@@ -22,14 +22,14 @@ public class DemoServlet extends HttpServlet {
      * @exception  ServletException  if there is a Servlet failure
      */
     public void init() throws ServletException {
-        
+
         taskId = 0;
         taskList = new ArrayList<Task>();
 
         //Below code is for testing purposes
         Date tdate = new Date("04/29/2023");
         Task task1 = new Task(taskId, tdate, "Demo Task", false);
-        
+
         taskList.add(task1);
     }
 
@@ -64,7 +64,7 @@ public class DemoServlet extends HttpServlet {
         // Task newTask = new Task(taskId, dueDate, description, completionStatus);
 
         // taskList.add(newTask);
-        
+
     }
 
 }
