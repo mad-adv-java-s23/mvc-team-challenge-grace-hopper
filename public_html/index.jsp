@@ -7,7 +7,7 @@
     <body>
         <h1>Servlet</h1>
         <a href="/java112/toDoList">Link to Servlet</a>
-        <h1>Tast List</h1>
+        <h1>Task List</h1>
         <a href="/java112/tasklist.jsp">Link to Task List jsp file</a>
         <h1>Diagram</h1>
         <a href="/java112/appDiagram.jsp">Link to Diagram jsp file</a>

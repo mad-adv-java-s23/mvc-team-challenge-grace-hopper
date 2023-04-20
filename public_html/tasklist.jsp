@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <title>To-Do List</title>
-  <link rel="stylesheet" href="styles/style.css">
+  <!-- <link rel="stylesheet" href="styles/style.css"> -->
   <style>
     table {
       width: 100%;

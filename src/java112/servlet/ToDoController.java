@@ -13,7 +13,8 @@ import java.util.*;
         urlPatterns = {"/toDoList"}
 )
 /**
- * Servlet controller for 'To Do List' web app...
+ * Servlet controller for 'To Do List' web app
+ * 
  * @author kangelo
  */
 public class ToDoController extends HttpServlet {
@@ -30,16 +31,6 @@ public class ToDoController extends HttpServlet {
 
          taskId = 0;
          taskList = new ArrayList<Task>();
-
-         Date tdate = null;
-         try {
-             tdate = new SimpleDateFormat("MM/dd/yyyy").parse("04/29/2023");
-         } catch (ParseException e) {
-             e.printStackTrace();
-         }
-         Task task1 = new Task(taskId, tdate, "Demo Task", false);
-
-         taskList.add(task1);
      }
 
 
@@ -61,6 +52,14 @@ public class ToDoController extends HttpServlet {
         dispatcher.forward(request, response);
     }
 
+    /**
+     * Handles HTTP POST requests.
+     *
+     * @param request  the HttpServletRequest object
+     * @param response the HttpServletResponse object
+     * @throws ServletException if there is a Servlet failure
+     * @throws IOException      if there is an IO failure
+     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
